@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>User.nn package &#8212; 2D1R_perturbation v0 文档</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=def86cc0" />
+    
+    <script src="_static/documentation_options.js?v=0adcffdc"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/translations.js?v=beaddf03"></script>
+    
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="User.utils package" href="User.utils.html" />
+    <link rel="prev" title="User package" href="User.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="总索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
+        <li class="right" >
+          <a href="User.utils.html" title="User.utils package"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="User.html" title="User package"
+             accesskey="P">上一页</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">2D1R_perturbation v0 文档</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >User</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="User.html" accesskey="U">User package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">User.nn package</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="user-nn-package">
+<h1>User.nn package<a class="headerlink" href="#user-nn-package" title="Link to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-User.nn.NonlinearNetwork">
+<span id="user-nn-nonlinearnetwork-module"></span><h2>User.nn.NonlinearNetwork module<a class="headerlink" href="#module-User.nn.NonlinearNetwork" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="User.nn.NonlinearNetwork.NeuralNetwork">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">User.nn.NonlinearNetwork.</span></span><span class="sig-name descname"><span class="pre">NeuralNetwork</span></span><a class="headerlink" href="#User.nn.NonlinearNetwork.NeuralNetwork" title="Link to this definition">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="#User.nn.module.Module" title="User.nn.module.Module"><code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="User.nn.NonlinearNetwork.NeuralNetwork.add_layer">
+<span class="sig-name descname"><span class="pre">add_layer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">layer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#User.nn.module.Module" title="User.nn.module.Module"><span class="pre">Module</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.nn.NonlinearNetwork.NeuralNetwork.add_layer" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="User.nn.NonlinearNetwork.NeuralNetwork.forward">
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.nn.NonlinearNetwork.NeuralNetwork.forward" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="User.nn.NonlinearNetwork.NonlinearNetwork">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">User.nn.NonlinearNetwork.</span></span><span class="sig-name descname"><span class="pre">NonlinearNetwork</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">set_layers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#User.nn.TDOR.Behaviour" title="User.nn.TDOR.Behaviour"><span class="pre">Behaviour</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#User.nn.TDOR.Layer2Layer" title="User.nn.TDOR.Layer2Layer"><span class="pre">Layer2Layer</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#User.nn.TDOR.Linear" title="User.nn.TDOR.Linear"><span class="pre">Linear</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.nn.NonlinearNetwork.NonlinearNetwork" title="Link to this definition">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="#User.nn.module.Module" title="User.nn.module.Module"><code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></a></p>
+<p>A Nonlinear_Network is a Module that consists of multiple layers of TDOR.Behaviour.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="User.nn.NonlinearNetwork.NonlinearNetwork.add_layer">
+<span class="sig-name descname"><span class="pre">add_layer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">layer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#User.nn.TDOR.Behaviour" title="User.nn.TDOR.Behaviour"><span class="pre">Behaviour</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#User.nn.TDOR.Layer2Layer" title="User.nn.TDOR.Layer2Layer"><span class="pre">Layer2Layer</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#User.nn.TDOR.Linear" title="User.nn.TDOR.Linear"><span class="pre">Linear</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.nn.NonlinearNetwork.NonlinearNetwork.add_layer" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="User.nn.NonlinearNetwork.NonlinearNetwork.backward">
+<span class="sig-name descname"><span class="pre">backward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">loss_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.01</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#User.nn.NonlinearNetwork.NonlinearNetwork.backward" title="Link to this definition">¶</a></dt>
+<dd><p>This function calculates the gradients of the loss function with respect to the parameters of the network.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lr</strong> – learning rate</p></li>
+<li><p><strong>loss_value</strong></p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>self._network_grad: A dictionary containing the gradients of the loss function with respect to the
+parameters of the network.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="User.nn.NonlinearNetwork.NonlinearNetwork.forward">
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.nn.NonlinearNetwork.NonlinearNetwork.forward" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="User.nn.NonlinearNetwork.NonlinearNetwork.get_output">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_output</span></span><a class="headerlink" href="#User.nn.NonlinearNetwork.NonlinearNetwork.get_output" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="User.nn.NonlinearNetwork.NonlinearNetwork.layers">
+<span class="sig-name descname"><span class="pre">layers</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#User.nn.TDOR.Behaviour" title="User.nn.TDOR.Behaviour"><span class="pre">Behaviour</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#User.nn.TDOR.Layer2Layer" title="User.nn.TDOR.Layer2Layer"><span class="pre">Layer2Layer</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#User.nn.TDOR.Linear" title="User.nn.TDOR.Linear"><span class="pre">Linear</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[Behaviour()]</span></em><a class="headerlink" href="#User.nn.NonlinearNetwork.NonlinearNetwork.layers" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="User.nn.NonlinearNetwork.NonlinearNetwork.lr">
+<span class="sig-name descname"><span class="pre">lr</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.01</span></em><a class="headerlink" href="#User.nn.NonlinearNetwork.NonlinearNetwork.lr" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="User.nn.NonlinearNetwork.NonlinearNetwork.step">
+<span class="sig-name descname"><span class="pre">step</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#User.nn.NonlinearNetwork.NonlinearNetwork.step" title="Link to this definition">¶</a></dt>
+<dd><p>This function updates the parameters of the network using the gradients calculated in the backward function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-User.nn.TDOR">
+<span id="user-nn-tdor-module"></span><h2>User.nn.TDOR module<a class="headerlink" href="#module-User.nn.TDOR" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="User.nn.TDOR.Behaviour">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">User.nn.TDOR.</span></span><span class="sig-name descname"><span class="pre">Behaviour</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.01</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.nn.TDOR.Behaviour" title="Link to this definition">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="#User.nn.module.Module" title="User.nn.module.Module"><code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></a></p>
+<p>This is a template class for the behaviour of 2D1R.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="User.nn.TDOR.Behaviour.action">
+<span class="sig-name descname"><span class="pre">action</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#User.nn.TDOR.Behaviour.action" title="Link to this definition">¶</a></dt>
+<dd><p>pass the input through the weights.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Param<span class="colon">:</span></dt>
+<dd class="field-odd"><p>beta = -3.2944 * alpha + 42.59</p>
+</dd>
+<dt class="field-even">Param<span class="colon">:</span></dt>
+<dd class="field-even"><p>alpha -&gt; weight,</p>
+</dd>
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>x</strong> – np.ndarray((1, input_dim)), a row vector of input</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>1E-6 * alpha * ((torch.exp(beta * x) - 1))</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="User.nn.TDOR.Behaviour.backward">
+<span class="sig-name descname"><span class="pre">backward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">loss_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#User.nn.TDOR.Behaviour.backward" title="Link to this definition">¶</a></dt>
+<dd><p>Get the gradient from the derivative of the loss w.r.t. the output of the layer
+Deliver the gradient to the previous layer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>loss_value</strong></p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="User.nn.TDOR.Behaviour.dy_dx">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dy_dx</span></span><a class="headerlink" href="#User.nn.TDOR.Behaviour.dy_dx" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="User.nn.TDOR.Behaviour.forward">
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#User.nn.TDOR.Behaviour.forward" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="User.nn.TDOR.Behaviour.get_output">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_output</span></span><a class="headerlink" href="#User.nn.TDOR.Behaviour.get_output" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="User.nn.TDOR.Behaviour.set_loss_value">
+<span class="sig-name descname"><span class="pre">set_loss_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.nn.TDOR.Behaviour.set_loss_value" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="User.nn.TDOR.Behaviour.small_signal">
+<span class="sig-name descname"><span class="pre">small_signal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.nn.TDOR.Behaviour.small_signal" title="Link to this definition">¶</a></dt>
+<dd><p>pass the input through the weights to get the small signal approximation of the derivative.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>x</strong></p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="User.nn.TDOR.Behaviour.step">
+<span class="sig-name descname"><span class="pre">step</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#User.nn.TDOR.Behaviour.step" title="Link to this definition">¶</a></dt>
+<dd><p>update the weights according to the small signal approximation of the derivative.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>any</strong></p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="User.nn.TDOR.Behaviour.type">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">type</span></span><a class="headerlink" href="#User.nn.TDOR.Behaviour.type" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="User.nn.TDOR.Layer2Layer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">User.nn.TDOR.</span></span><span class="sig-name descname"><span class="pre">Layer2Layer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.nn.TDOR.Layer2Layer" title="Link to this definition">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="#User.nn.module.Module" title="User.nn.module.Module"><code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></a></p>
+<p>This is a template class for the layer-to-layer connection of 2D1R.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="User.nn.TDOR.Layer2Layer.scaling">
+<span class="sig-name descname"><span class="pre">scaling</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#User.nn.TDOR.Layer2Layer.scaling" title="Link to this definition">¶</a></dt>
+<dd><p>pass the input through the weights.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>x</strong></p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="User.nn.TDOR.Linear">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">User.nn.TDOR.</span></span><span class="sig-name descname"><span class="pre">Linear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.nn.TDOR.Linear" title="Link to this definition">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="#User.nn.module.Module" title="User.nn.module.Module"><code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="User.nn.TDOR.Linear.forward">
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#User.nn.TDOR.Linear.forward" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="User.nn.TDOR.validate_instance">
+<span class="sig-prename descclassname"><span class="pre">User.nn.TDOR.</span></span><span class="sig-name descname"><span class="pre">validate_instance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">instance</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.nn.TDOR.validate_instance" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-User.nn.module">
+<span id="user-nn-module-module"></span><h2>User.nn.module module<a class="headerlink" href="#module-User.nn.module" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="User.nn.module.Module">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">User.nn.module.</span></span><span class="sig-name descname"><span class="pre">Module</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.nn.module.Module" title="Link to this definition">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Base class for all neural network modules.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="User.nn.module.Module.backward">
+<span class="sig-name descname"><span class="pre">backward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Any</span></span></span><a class="headerlink" href="#User.nn.module.Module.backward" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="User.nn.module.Module.forward">
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Any</span></span></span><a class="headerlink" href="#User.nn.module.Module.forward" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="User.nn.module.Module.module">
+<span class="sig-name descname"><span class="pre">module</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#User.nn.module.Module.module" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="User.nn.module.Module.step">
+<span class="sig-name descname"><span class="pre">step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Any</span></span></span><a class="headerlink" href="#User.nn.module.Module.step" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-User.nn.optim">
+<span id="user-nn-optim-module"></span><h2>User.nn.optim module<a class="headerlink" href="#module-User.nn.optim" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="User.nn.optim.Function">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">User.nn.optim.</span></span><span class="sig-name descname"><span class="pre">Function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'MSE'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.nn.optim.Function" title="Link to this definition">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="User.nn.optim.Function.forward">
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">network</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#User.nn.NonlinearNetwork.NonlinearNetwork" title="User.nn.NonlinearNetwork.NonlinearNetwork"><span class="pre">NonlinearNetwork</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.nn.optim.Function.forward" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="User.nn.optim.gradient">
+<span class="sig-prename descclassname"><span class="pre">User.nn.optim.</span></span><span class="sig-name descname"><span class="pre">gradient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.nn.optim.gradient" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="User.nn.optim.gradient_descent">
+<span class="sig-prename descclassname"><span class="pre">User.nn.optim.</span></span><span class="sig-name descname"><span class="pre">gradient_descent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_iters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.nn.optim.gradient_descent" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="User.nn.optim.perturbation">
+<span class="sig-prename descclassname"><span class="pre">User.nn.optim.</span></span><span class="sig-name descname"><span class="pre">perturbation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_iters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.nn.optim.perturbation" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-User.nn">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-User.nn" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="User.nn.Behaviour">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">User.nn.</span></span><span class="sig-name descname"><span class="pre">Behaviour</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.01</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.nn.Behaviour" title="Link to this definition">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="#User.nn.module.Module" title="User.nn.module.Module"><code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></a></p>
+<p>This is a template class for the behaviour of 2D1R.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="User.nn.Behaviour.action">
+<span class="sig-name descname"><span class="pre">action</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#User.nn.Behaviour.action" title="Link to this definition">¶</a></dt>
+<dd><p>pass the input through the weights.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Param<span class="colon">:</span></dt>
+<dd class="field-odd"><p>beta = -3.2944 * alpha + 42.59</p>
+</dd>
+<dt class="field-even">Param<span class="colon">:</span></dt>
+<dd class="field-even"><p>alpha -&gt; weight,</p>
+</dd>
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>x</strong> – np.ndarray((1, input_dim)), a row vector of input</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>1E-6 * alpha * ((torch.exp(beta * x) - 1))</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="User.nn.Behaviour.backward">
+<span class="sig-name descname"><span class="pre">backward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">loss_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#User.nn.Behaviour.backward" title="Link to this definition">¶</a></dt>
+<dd><p>Get the gradient from the derivative of the loss w.r.t. the output of the layer
+Deliver the gradient to the previous layer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>loss_value</strong></p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="User.nn.Behaviour.dy_dx">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dy_dx</span></span><a class="headerlink" href="#User.nn.Behaviour.dy_dx" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="User.nn.Behaviour.forward">
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#User.nn.Behaviour.forward" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="User.nn.Behaviour.get_output">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_output</span></span><a class="headerlink" href="#User.nn.Behaviour.get_output" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="User.nn.Behaviour.set_loss_value">
+<span class="sig-name descname"><span class="pre">set_loss_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.nn.Behaviour.set_loss_value" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="User.nn.Behaviour.small_signal">
+<span class="sig-name descname"><span class="pre">small_signal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.nn.Behaviour.small_signal" title="Link to this definition">¶</a></dt>
+<dd><p>pass the input through the weights to get the small signal approximation of the derivative.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>x</strong></p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="User.nn.Behaviour.step">
+<span class="sig-name descname"><span class="pre">step</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#User.nn.Behaviour.step" title="Link to this definition">¶</a></dt>
+<dd><p>update the weights according to the small signal approximation of the derivative.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>any</strong></p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="User.nn.Behaviour.type">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">type</span></span><a class="headerlink" href="#User.nn.Behaviour.type" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="User.nn.Function">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">User.nn.</span></span><span class="sig-name descname"><span class="pre">Function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'MSE'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.nn.Function" title="Link to this definition">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="User.nn.Function.forward">
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">network</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#User.nn.NonlinearNetwork.NonlinearNetwork" title="User.nn.NonlinearNetwork.NonlinearNetwork"><span class="pre">NonlinearNetwork</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.nn.Function.forward" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="User.nn.Module">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">User.nn.</span></span><span class="sig-name descname"><span class="pre">Module</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.nn.Module" title="Link to this definition">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Base class for all neural network modules.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="User.nn.Module.backward">
+<span class="sig-name descname"><span class="pre">backward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Any</span></span></span><a class="headerlink" href="#User.nn.Module.backward" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="User.nn.Module.forward">
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Any</span></span></span><a class="headerlink" href="#User.nn.Module.forward" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="User.nn.Module.module">
+<span class="sig-name descname"><span class="pre">module</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#User.nn.Module.module" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="User.nn.Module.step">
+<span class="sig-name descname"><span class="pre">step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Any</span></span></span><a class="headerlink" href="#User.nn.Module.step" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="User.nn.NeuralNetwork">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">User.nn.</span></span><span class="sig-name descname"><span class="pre">NeuralNetwork</span></span><a class="headerlink" href="#User.nn.NeuralNetwork" title="Link to this definition">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="#User.nn.module.Module" title="User.nn.module.Module"><code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="User.nn.NeuralNetwork.add_layer">
+<span class="sig-name descname"><span class="pre">add_layer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">layer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#User.nn.module.Module" title="User.nn.module.Module"><span class="pre">Module</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.nn.NeuralNetwork.add_layer" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="User.nn.NeuralNetwork.forward">
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.nn.NeuralNetwork.forward" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="User.nn.NonlinearNetwork">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">User.nn.</span></span><span class="sig-name descname"><span class="pre">NonlinearNetwork</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">set_layers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#User.nn.TDOR.Behaviour" title="User.nn.TDOR.Behaviour"><span class="pre">Behaviour</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#User.nn.TDOR.Layer2Layer" title="User.nn.TDOR.Layer2Layer"><span class="pre">Layer2Layer</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#User.nn.TDOR.Linear" title="User.nn.TDOR.Linear"><span class="pre">Linear</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.nn.NonlinearNetwork" title="Link to this definition">¶</a></dt>
+<dd><p>基类：<a class="reference internal" href="#User.nn.module.Module" title="User.nn.module.Module"><code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></a></p>
+<p>A Nonlinear_Network is a Module that consists of multiple layers of TDOR.Behaviour.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="User.nn.NonlinearNetwork.add_layer">
+<span class="sig-name descname"><span class="pre">add_layer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">layer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#User.nn.TDOR.Behaviour" title="User.nn.TDOR.Behaviour"><span class="pre">Behaviour</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#User.nn.TDOR.Layer2Layer" title="User.nn.TDOR.Layer2Layer"><span class="pre">Layer2Layer</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#User.nn.TDOR.Linear" title="User.nn.TDOR.Linear"><span class="pre">Linear</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.nn.NonlinearNetwork.add_layer" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="User.nn.NonlinearNetwork.backward">
+<span class="sig-name descname"><span class="pre">backward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">loss_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.01</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#User.nn.NonlinearNetwork.backward" title="Link to this definition">¶</a></dt>
+<dd><p>This function calculates the gradients of the loss function with respect to the parameters of the network.</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lr</strong> – learning rate</p></li>
+<li><p><strong>loss_value</strong></p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>self._network_grad: A dictionary containing the gradients of the loss function with respect to the
+parameters of the network.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="User.nn.NonlinearNetwork.forward">
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.nn.NonlinearNetwork.forward" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="User.nn.NonlinearNetwork.get_output">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_output</span></span><a class="headerlink" href="#User.nn.NonlinearNetwork.get_output" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="User.nn.NonlinearNetwork.layers">
+<span class="sig-name descname"><span class="pre">layers</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#User.nn.TDOR.Behaviour" title="User.nn.TDOR.Behaviour"><span class="pre">Behaviour</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#User.nn.TDOR.Layer2Layer" title="User.nn.TDOR.Layer2Layer"><span class="pre">Layer2Layer</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="#User.nn.TDOR.Linear" title="User.nn.TDOR.Linear"><span class="pre">Linear</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[Behaviour()]</span></em><a class="headerlink" href="#User.nn.NonlinearNetwork.layers" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="User.nn.NonlinearNetwork.lr">
+<span class="sig-name descname"><span class="pre">lr</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.01</span></em><a class="headerlink" href="#User.nn.NonlinearNetwork.lr" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="User.nn.NonlinearNetwork.module">
+<span class="sig-name descname"><span class="pre">module</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><a class="headerlink" href="#User.nn.NonlinearNetwork.module" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="User.nn.NonlinearNetwork.step">
+<span class="sig-name descname"><span class="pre">step</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#User.nn.NonlinearNetwork.step" title="Link to this definition">¶</a></dt>
+<dd><p>This function updates the parameters of the network using the gradients calculated in the backward function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="User.nn.gradient">
+<span class="sig-prename descclassname"><span class="pre">User.nn.</span></span><span class="sig-name descname"><span class="pre">gradient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.nn.gradient" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="User.nn.gradient_descent">
+<span class="sig-prename descclassname"><span class="pre">User.nn.</span></span><span class="sig-name descname"><span class="pre">gradient_descent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_iters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.nn.gradient_descent" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="User.nn.perturbation">
+<span class="sig-prename descclassname"><span class="pre">User.nn.</span></span><span class="sig-name descname"><span class="pre">perturbation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_iters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#User.nn.perturbation" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">目录</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">User.nn package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-User.nn.NonlinearNetwork">User.nn.NonlinearNetwork module</a><ul>
+<li><a class="reference internal" href="#User.nn.NonlinearNetwork.NeuralNetwork"><code class="docutils literal notranslate"><span class="pre">NeuralNetwork</span></code></a><ul>
+<li><a class="reference internal" href="#User.nn.NonlinearNetwork.NeuralNetwork.add_layer"><code class="docutils literal notranslate"><span class="pre">NeuralNetwork.add_layer()</span></code></a></li>
+<li><a class="reference internal" href="#User.nn.NonlinearNetwork.NeuralNetwork.forward"><code class="docutils literal notranslate"><span class="pre">NeuralNetwork.forward()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#User.nn.NonlinearNetwork.NonlinearNetwork"><code class="docutils literal notranslate"><span class="pre">NonlinearNetwork</span></code></a><ul>
+<li><a class="reference internal" href="#User.nn.NonlinearNetwork.NonlinearNetwork.add_layer"><code class="docutils literal notranslate"><span class="pre">NonlinearNetwork.add_layer()</span></code></a></li>
+<li><a class="reference internal" href="#User.nn.NonlinearNetwork.NonlinearNetwork.backward"><code class="docutils literal notranslate"><span class="pre">NonlinearNetwork.backward()</span></code></a></li>
+<li><a class="reference internal" href="#User.nn.NonlinearNetwork.NonlinearNetwork.forward"><code class="docutils literal notranslate"><span class="pre">NonlinearNetwork.forward()</span></code></a></li>
+<li><a class="reference internal" href="#User.nn.NonlinearNetwork.NonlinearNetwork.get_output"><code class="docutils literal notranslate"><span class="pre">NonlinearNetwork.get_output</span></code></a></li>
+<li><a class="reference internal" href="#User.nn.NonlinearNetwork.NonlinearNetwork.layers"><code class="docutils literal notranslate"><span class="pre">NonlinearNetwork.layers</span></code></a></li>
+<li><a class="reference internal" href="#User.nn.NonlinearNetwork.NonlinearNetwork.lr"><code class="docutils literal notranslate"><span class="pre">NonlinearNetwork.lr</span></code></a></li>
+<li><a class="reference internal" href="#User.nn.NonlinearNetwork.NonlinearNetwork.step"><code class="docutils literal notranslate"><span class="pre">NonlinearNetwork.step()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-User.nn.TDOR">User.nn.TDOR module</a><ul>
+<li><a class="reference internal" href="#User.nn.TDOR.Behaviour"><code class="docutils literal notranslate"><span class="pre">Behaviour</span></code></a><ul>
+<li><a class="reference internal" href="#User.nn.TDOR.Behaviour.action"><code class="docutils literal notranslate"><span class="pre">Behaviour.action()</span></code></a></li>
+<li><a class="reference internal" href="#User.nn.TDOR.Behaviour.backward"><code class="docutils literal notranslate"><span class="pre">Behaviour.backward()</span></code></a></li>
+<li><a class="reference internal" href="#User.nn.TDOR.Behaviour.dy_dx"><code class="docutils literal notranslate"><span class="pre">Behaviour.dy_dx</span></code></a></li>
+<li><a class="reference internal" href="#User.nn.TDOR.Behaviour.forward"><code class="docutils literal notranslate"><span class="pre">Behaviour.forward()</span></code></a></li>
+<li><a class="reference internal" href="#User.nn.TDOR.Behaviour.get_output"><code class="docutils literal notranslate"><span class="pre">Behaviour.get_output</span></code></a></li>
+<li><a class="reference internal" href="#User.nn.TDOR.Behaviour.set_loss_value"><code class="docutils literal notranslate"><span class="pre">Behaviour.set_loss_value()</span></code></a></li>
+<li><a class="reference internal" href="#User.nn.TDOR.Behaviour.small_signal"><code class="docutils literal notranslate"><span class="pre">Behaviour.small_signal()</span></code></a></li>
+<li><a class="reference internal" href="#User.nn.TDOR.Behaviour.step"><code class="docutils literal notranslate"><span class="pre">Behaviour.step()</span></code></a></li>
+<li><a class="reference internal" href="#User.nn.TDOR.Behaviour.type"><code class="docutils literal notranslate"><span class="pre">Behaviour.type</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#User.nn.TDOR.Layer2Layer"><code class="docutils literal notranslate"><span class="pre">Layer2Layer</span></code></a><ul>
+<li><a class="reference internal" href="#User.nn.TDOR.Layer2Layer.scaling"><code class="docutils literal notranslate"><span class="pre">Layer2Layer.scaling()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#User.nn.TDOR.Linear"><code class="docutils literal notranslate"><span class="pre">Linear</span></code></a><ul>
+<li><a class="reference internal" href="#User.nn.TDOR.Linear.forward"><code class="docutils literal notranslate"><span class="pre">Linear.forward()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#User.nn.TDOR.validate_instance"><code class="docutils literal notranslate"><span class="pre">validate_instance()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-User.nn.module">User.nn.module module</a><ul>
+<li><a class="reference internal" href="#User.nn.module.Module"><code class="docutils literal notranslate"><span class="pre">Module</span></code></a><ul>
+<li><a class="reference internal" href="#User.nn.module.Module.backward"><code class="docutils literal notranslate"><span class="pre">Module.backward()</span></code></a></li>
+<li><a class="reference internal" href="#User.nn.module.Module.forward"><code class="docutils literal notranslate"><span class="pre">Module.forward()</span></code></a></li>
+<li><a class="reference internal" href="#User.nn.module.Module.module"><code class="docutils literal notranslate"><span class="pre">Module.module</span></code></a></li>
+<li><a class="reference internal" href="#User.nn.module.Module.step"><code class="docutils literal notranslate"><span class="pre">Module.step()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-User.nn.optim">User.nn.optim module</a><ul>
+<li><a class="reference internal" href="#User.nn.optim.Function"><code class="docutils literal notranslate"><span class="pre">Function</span></code></a><ul>
+<li><a class="reference internal" href="#User.nn.optim.Function.forward"><code class="docutils literal notranslate"><span class="pre">Function.forward()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#User.nn.optim.gradient"><code class="docutils literal notranslate"><span class="pre">gradient()</span></code></a></li>
+<li><a class="reference internal" href="#User.nn.optim.gradient_descent"><code class="docutils literal notranslate"><span class="pre">gradient_descent()</span></code></a></li>
+<li><a class="reference internal" href="#User.nn.optim.perturbation"><code class="docutils literal notranslate"><span class="pre">perturbation()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-User.nn">Module contents</a><ul>
+<li><a class="reference internal" href="#User.nn.Behaviour"><code class="docutils literal notranslate"><span class="pre">Behaviour</span></code></a><ul>
+<li><a class="reference internal" href="#User.nn.Behaviour.action"><code class="docutils literal notranslate"><span class="pre">Behaviour.action()</span></code></a></li>
+<li><a class="reference internal" href="#User.nn.Behaviour.backward"><code class="docutils literal notranslate"><span class="pre">Behaviour.backward()</span></code></a></li>
+<li><a class="reference internal" href="#User.nn.Behaviour.dy_dx"><code class="docutils literal notranslate"><span class="pre">Behaviour.dy_dx</span></code></a></li>
+<li><a class="reference internal" href="#User.nn.Behaviour.forward"><code class="docutils literal notranslate"><span class="pre">Behaviour.forward()</span></code></a></li>
+<li><a class="reference internal" href="#User.nn.Behaviour.get_output"><code class="docutils literal notranslate"><span class="pre">Behaviour.get_output</span></code></a></li>
+<li><a class="reference internal" href="#User.nn.Behaviour.set_loss_value"><code class="docutils literal notranslate"><span class="pre">Behaviour.set_loss_value()</span></code></a></li>
+<li><a class="reference internal" href="#User.nn.Behaviour.small_signal"><code class="docutils literal notranslate"><span class="pre">Behaviour.small_signal()</span></code></a></li>
+<li><a class="reference internal" href="#User.nn.Behaviour.step"><code class="docutils literal notranslate"><span class="pre">Behaviour.step()</span></code></a></li>
+<li><a class="reference internal" href="#User.nn.Behaviour.type"><code class="docutils literal notranslate"><span class="pre">Behaviour.type</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#User.nn.Function"><code class="docutils literal notranslate"><span class="pre">Function</span></code></a><ul>
+<li><a class="reference internal" href="#User.nn.Function.forward"><code class="docutils literal notranslate"><span class="pre">Function.forward()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#User.nn.Module"><code class="docutils literal notranslate"><span class="pre">Module</span></code></a><ul>
+<li><a class="reference internal" href="#User.nn.Module.backward"><code class="docutils literal notranslate"><span class="pre">Module.backward()</span></code></a></li>
+<li><a class="reference internal" href="#User.nn.Module.forward"><code class="docutils literal notranslate"><span class="pre">Module.forward()</span></code></a></li>
+<li><a class="reference internal" href="#User.nn.Module.module"><code class="docutils literal notranslate"><span class="pre">Module.module</span></code></a></li>
+<li><a class="reference internal" href="#User.nn.Module.step"><code class="docutils literal notranslate"><span class="pre">Module.step()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#User.nn.NeuralNetwork"><code class="docutils literal notranslate"><span class="pre">NeuralNetwork</span></code></a><ul>
+<li><a class="reference internal" href="#User.nn.NeuralNetwork.add_layer"><code class="docutils literal notranslate"><span class="pre">NeuralNetwork.add_layer()</span></code></a></li>
+<li><a class="reference internal" href="#User.nn.NeuralNetwork.forward"><code class="docutils literal notranslate"><span class="pre">NeuralNetwork.forward()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#User.nn.NonlinearNetwork"><code class="docutils literal notranslate"><span class="pre">NonlinearNetwork</span></code></a><ul>
+<li><a class="reference internal" href="#User.nn.NonlinearNetwork.add_layer"><code class="docutils literal notranslate"><span class="pre">NonlinearNetwork.add_layer()</span></code></a></li>
+<li><a class="reference internal" href="#User.nn.NonlinearNetwork.backward"><code class="docutils literal notranslate"><span class="pre">NonlinearNetwork.backward()</span></code></a></li>
+<li><a class="reference internal" href="#User.nn.NonlinearNetwork.forward"><code class="docutils literal notranslate"><span class="pre">NonlinearNetwork.forward()</span></code></a></li>
+<li><a class="reference internal" href="#User.nn.NonlinearNetwork.get_output"><code class="docutils literal notranslate"><span class="pre">NonlinearNetwork.get_output</span></code></a></li>
+<li><a class="reference internal" href="#User.nn.NonlinearNetwork.layers"><code class="docutils literal notranslate"><span class="pre">NonlinearNetwork.layers</span></code></a></li>
+<li><a class="reference internal" href="#User.nn.NonlinearNetwork.lr"><code class="docutils literal notranslate"><span class="pre">NonlinearNetwork.lr</span></code></a></li>
+<li><a class="reference internal" href="#User.nn.NonlinearNetwork.module"><code class="docutils literal notranslate"><span class="pre">NonlinearNetwork.module</span></code></a></li>
+<li><a class="reference internal" href="#User.nn.NonlinearNetwork.step"><code class="docutils literal notranslate"><span class="pre">NonlinearNetwork.step()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#User.nn.gradient"><code class="docutils literal notranslate"><span class="pre">gradient()</span></code></a></li>
+<li><a class="reference internal" href="#User.nn.gradient_descent"><code class="docutils literal notranslate"><span class="pre">gradient_descent()</span></code></a></li>
+<li><a class="reference internal" href="#User.nn.perturbation"><code class="docutils literal notranslate"><span class="pre">perturbation()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>上一主题</h4>
+    <p class="topless"><a href="User.html"
+                          title="上一章">User package</a></p>
+  </div>
+  <div>
+    <h4>下一主题</h4>
+    <p class="topless"><a href="User.utils.html"
+                          title="下一章">User.utils package</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/User.nn.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="提交" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="总索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
+        <li class="right" >
+          <a href="User.utils.html" title="User.utils package"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="User.html" title="User package"
+             >上一页</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">2D1R_perturbation v0 文档</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >User</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="User.html" >User package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">User.nn package</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; 版权所有 2024, kiki.
+      由 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7创建。
+    </div>
+  </body>
+</html>
