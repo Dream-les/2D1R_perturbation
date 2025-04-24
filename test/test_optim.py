@@ -1,5 +1,9 @@
+# Defination for testing
+import sys
+sys.path.append('F:\\Desktop\\temp\\python\\2D1R_PP\\pythonProject')
+
 import numpy as np
-from .base.module import Module
+from User.NonlinearNetwork import Network
 
 
 def gradient_descent(f, x0, step_size, num_iters, callback=None):
@@ -61,7 +65,7 @@ class Function:
                                 }  # TODO: cross-entropy loss function is not implemented yet
         self._loss_f = loss_f
 
-    def __call__(self, network_in: Module, y: np.ndarray, lr_in: float = 0.001, ):
+    def __call__(self, network_in: Network, y: np.ndarray, lr_in: float = 0.001, ):
         y_pred, loss = self.forward(network_in.get_output, y)
         self._y_pred = y_pred
         self._loss = loss

@@ -1,3 +1,7 @@
+# Defination for testing
+import sys
+sys.path.append('F:\\Desktop\\temp\\python\\2D1R_PP\\pythonProject')
+
 import User.utils.dataloader
 import User.nn.TDOR as TDOR
 import numpy as np
@@ -39,8 +43,8 @@ optd = dl.Datasets()
 train, test = optd('optdigits', preprocess=True)
 
 # Define the neural network and initialization
-LOAD_MODEL = True  # True or False
-LOAD_EVAL = True  # True or False
+LOAD_MODEL = False  # True or False
+LOAD_EVAL = False  # True or False
 model_save_path = 'F:\\Desktop\\temp\\python\\2D1R_PP\\pythonProject\\model\\weights_test_Beh.pkl'
 
 
@@ -53,6 +57,7 @@ else:
     #               TDOR.Layer2Layer(), TDOR.Behaviour(20, 10),
     #               TDOR.Layer2Layer(), ]
     layer_list = [TDOR.Layer2LayerB(), TDOR.Behaviour(8 * 8, 10),
+                  TDOR.Layer2Layer(), TDOR.Behaviour(10, 10), 
                   TDOR.Layer2Layer(), ]
     nn = Network(layer_list)
 
@@ -61,12 +66,12 @@ f_obj = Function("MSE", "sigmoid", )
 # Train the neural network
 loss_vector = np.array([])  # TODO: Check
 count = 0  # count the number of correct predictions
-learning_rate = 200  # Linear:单层7e-3_97%; Behaviour:单层100_60%, 200_90%, 
+learning_rate = 1e-2  # Linear:单层7e-3_97%; Behaviour:单层100_60%, 200_95%, 
 train_size = 3823  # 3823
-epochs = 1000 #40
+epochs = 5000 #40
 test_size = 1797
 
-eval_path = 'F:\\Desktop\\temp\\python\\2D1R_PP\\pythonProject\\model\\eval_test_Beh.pkl'
+eval_path = 'F:\\Desktop\\temp\\python\\2D1R_PP\\pythonProject\\model\\eval_test_Beh_2layers.pkl'
 if LOAD_EVAL:
     with open(eval_path, 'rb') as f:
         eval_dict = pickle.load(f)
@@ -133,9 +138,9 @@ fig, ax = plt.subplots(2, 2, figsize=(10, 10), layout='constrained')
 ax[0, 0].plot(loss_value, 'r-o')
 ax[0, 0].set_title('Loss value')
 ax[0, 1].plot(accuracy, 'b-o')
+ax[0, 1].minorticks_on()
 ax[0, 1].set_title('Train accuracy')
 ax[1, 0].plot(test_accuracy, 'b-o')
-ax[1, 0].minor_ticks_on()
 ax[1, 0].set_title('Test accuracy' + str(nn.get_y_pred.argmax(axis=1)))
 ax[1, 1].imshow(x.reshape(8, 8))
 ax[1, 1].set_title('Input Image' + str(y.argmax(axis=1)))
@@ -161,5 +166,6 @@ with open(eval_path, 'wb') as f:
 
 # Save the model
 nn.save_model(model_save_path)
-
+plt.savefig('./model/result/1layer_2d1r.eps', format='eps')
 print("Hello World!")
+

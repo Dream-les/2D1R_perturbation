@@ -1,13 +1,16 @@
-from User.nn import module
+# Defination for testing
+import sys
+sys.path.append('F:\\Desktop\\temp\\python\\2D1R_PP\\pythonProject')
+
 from typing import Union
 import User.nn.TDOR as TDOR
 import numpy as np
 from User.nn.optim import Function
-from User.nn.module import Module
+from User.nn.base.module import Module
 import pickle
 
 
-class Network(module.Module):
+class Network(Module):
     """
     A Nonlinear_Network is a Module that consists of multiple layers of TDOR.Behaviour.
     """
@@ -55,17 +58,16 @@ class Network(module.Module):
             self._count += 1
         return y_pred, l_value
 
-    def backward(self, loss_value_in: np.ndarray, ) -> None:  # TODO: Check if this is correct
+    def backward(self, last_grad: np.ndarray, ) -> None:  # TODO: Check if this is correct
         """
         This function calculates the gradients of the loss function with respect to the parameters of the network.
 
         :param lr: learning rate
-        :param loss_value_in: loss value of the network
+        :param last_grad: last layer grad
         :return: self._network_grad: A dictionary containing the gradients of the loss function with respect to the
                 parameters of the network.
         """
-        self._loss_values = loss_value_in
-        current_grad = loss_value_in
+        current_grad = last_grad
         i = self._layer_num
         for layer in reversed(self.layers):
             self._network_grad['layer' + str(i)] = current_grad
@@ -108,7 +110,7 @@ class Network(module.Module):
     #         #     self.layers[i].__dict__.update(pickle.load(f).__dict__)
 
     def start_grad(self, grad: np.ndarray) -> None:
-        self._network_grad['loss'] = grad
+        self._network_grad['loss_grad'] = grad
 
     def reset_count_loss(self) -> None:
         self._count = 0
@@ -135,13 +137,13 @@ class Network(module.Module):
         return self._count
 
 
-class NeuralNetwork(module.Module):
+class NeuralNetwork(Module):
 
     def __init__(self):
         super(NeuralNetwork, self).__init__()
         self.layers = []
 
-    def add_layer(self, layer: module.Module):
+    def add_layer(self, layer: Module):
         self.layers.append(layer)
 
     def forward(self, x_in):
@@ -152,19 +154,44 @@ class NeuralNetwork(module.Module):
 
 if __name__ == "__main__":  # TODO: Design a test case for NonlinearNetwork
     import matplotlib.pyplot as plt
-
-    layer_list = [TDOR.Layer2Layer(), TDOR.Behaviour(5, 5),
-                  TDOR.Layer2Layer(), TDOR.Behaviour(5, 5), ]
+    ############ Nonlinear Layer Test ############
+    layer_list = [TDOR.Layer2LayerB(), 
+                  TDOR.Behaviour(10, 10), TDOR.Layer2Layer(), ]
     nn = Network(layer_list)
     f_obj = Function("MSE", "sigmoid", )
-    x = np.array([1, 2, 3, 4, 5])
-    y = np.array([1, 0, 0, 0, 0])
+    x = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+    y = np.array([[0, 0, 1, 0, 0, 0, 0, 0, 0, 0]])
     loss_value = []
-    for i in range(5000):
-        nn.forward(x, y, f_obj, lr=1)
+    for i in range(1000):
+        y_p, l = nn.forward(x, y, f_obj, lr=10000)
+        print("stop")
         nn.step()
-        loss_value.append(np.mean(nn.get_loss))
-    loss_value = np.array(loss_value)
+        print('Times:{}'.format(i))
+        print(f"y - y_pred: {y - y_p}")
+        print(f"label_pred: {y_p.argmax(axis=1)}")
+    loos_record = nn.get_loss
+    loss_value = np.mean(nn.get_loss, axis=1)[1:]
     plt.plot(loss_value, 'r-o')
     plt.show()
     print(nn.grad)
+
+    ############ Linear Layer Test ############
+    '''layer_list = [TDOR.Linear(10, 10), TDOR.Layer2Layer(), 
+                  TDOR.Linear(10, 10), TDOR.Layer2Layer(), ]
+    nn = Network(layer_list)
+    f_obj = Function("MSE", "sigmoid", )
+    x = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+    y = np.array([[0, 0, 1, 0, 0, 0, 0, 0, 0, 0]])
+    loss_value = []
+    for i in range(300):
+        y_p, l = nn.forward(x, y, f_obj, lr=1e-3)
+        print("stop")
+        nn.step()
+        print('Times:{}'.format(i))
+        print(f"y - y_pred: {y - y_p}")
+        print(f"label_pred: {y_p.argmax(axis=1)}")
+    loos_record = nn.get_loss
+    loss_value = np.mean(nn.get_loss, axis=1)[1:]
+    plt.plot(loss_value, 'r-o')
+    plt.show()
+    print(nn.grad)'''

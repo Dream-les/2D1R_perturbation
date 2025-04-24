@@ -1,3 +1,8 @@
+# Defination for testing
+import sys
+sys.path.append('F:\\Desktop\\temp\\python\\2D1R_PP\\pythonProject')
+
+# Main code
 import pickle
 import warnings
 import numpy as np
@@ -36,7 +41,7 @@ class Behaviour(Module):
         super().__init__()
         self._input_dim = input_dim
         self._output_dim = output_dim
-        self.weights = np.random.rand(input_dim, output_dim) * 2 + 1  # alpha: range(0, 4)
+        self.weights = np.random.rand(input_dim, output_dim) * 2 - 1  # alpha: range(0, 4)
         # self.delta_x = np.zeros((input_dim, )) + delta
         self._delta = delta
         self._type = "Behaviour"
@@ -58,9 +63,9 @@ class Behaviour(Module):
         #         print(self._deliver_grad)
         #         print(f'Caught warning: {warning.message}')
         beta0 = -16.6565 * (abs(self.weights + d_w)) ** 0.1 + 34.697
-        # beta = np.where(self.weights + d_w >= 0, beta0, -beta0)
-        temp = np.multiply(x_in.transpose(), beta0)
-        self.fx = 1E6 * 1E-12 * (self.weights + d_w) * (np.exp(temp) - np.exp(-temp))  # TODO: Negative gradient?
+        beta = np.where(self.weights + d_w >= 0, beta0, -beta0)
+        temp = np.multiply(x_in.transpose(), beta)
+        self.fx = 1E6 * 1E-12 * abs(self.weights + d_w) * (np.exp(temp) - np.exp(-temp))  # TODO: Negative gradient?
         return self.fx
 
     def forward(self, x_in: np.ndarray, ) -> np.ndarray:
@@ -181,39 +186,10 @@ class Layer2Layer(Module):
 
     def limit_weights(self, ) -> None:
         # self.weights = np.clip(self.weights, -1, 1)
-        self._val = np.max(self.weights) - np.min(self.weights)
-        if self._val == 0:
-            self._val = 1
-        self.weights = (self.weights / self._val) * 0.1
-
-
-class Layer2LayerB(Layer2Layer):
-    """
-    This is a template class for the layer-to-layer connection of 2D1R.
-    """
-    _layer_output = np.ndarray
-
-    def __init__(self,input_dim=1, output_dim=1, ):
-        super().__init__()
-        self.weights = np.random.randn(input_dim,output_dim)
-
-    def scaling(self, x_in: np.ndarray, ) -> np.ndarray:  # TODO: change to small_signal
-        """
-        pass the input through the weights.
-
-        :param x_in:
-        :return:
-        """
-        # 0.1 * (np.exp(x_in) / np.sum(np.exp(x_in)))
-        self._x_in = x_in.copy()
-        # val = np.max(x_in)-np.min(x_in)
-        val = np.max(abs(x_in))
+        val = np.max(self.weights) - np.min(self.weights)
         if val == 0:
             val = 1
-        self._val = val
-        temp = 0.6*(x_in / self._val) - 0.3
-        temp1 = np.where(temp >= 0, temp+0.5, temp-0.5)
-        return temp1
+        self.weights = (self.weights / val) * 0.1
 
 
 class Linear(Module):
